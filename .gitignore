@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+wp-config.php
+
+!wp-content/themes/gbh-theme/
+wp-content/themes/eatshed/node_modules/
+wp-content/themes/eatshed/.sass-cache/
+wp-content/themes/eatshed/.DS_Store
