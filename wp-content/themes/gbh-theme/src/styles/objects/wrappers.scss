@@ -1,0 +1,19 @@
+// =============================================================================
+// Wrappers
+// =============================================================================
+
+.wrapper {
+	max-width: map-get($grid-breakpoints, xl);
+	margin: 0 auto;
+	padding: 0 $spacing;
+}
+
+.section-white {
+	background-color: white;
+}
+.section-black {
+	background-color: black;
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, p {
+		color: white;
+	}
+}

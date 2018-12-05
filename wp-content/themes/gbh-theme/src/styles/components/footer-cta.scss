@@ -1,0 +1,14 @@
+.footer-cta {
+    padding: 90px 0;
+
+    .col-icon {
+        margin-bottom: 1.4em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        p {
+            margin-bottom: 0;
+            margin-left: 1.4em;
+        }
+    }
+}

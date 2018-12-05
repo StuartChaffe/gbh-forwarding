@@ -1,0 +1,122 @@
+.block-links {
+    &-large {
+        @extend .container;
+        display: flex;
+        margin-top: -80px;
+        position: relative;
+        flex-direction: column;
+        z-index: z-scale(blocks);
+        @include media-breakpoint-up(md) {
+            margin-top: -150px;
+            flex-direction: row;
+        }
+        &--item {
+            width: 100%;
+            @include media-breakpoint-up(md) {
+                width: 33.33333%;
+            }
+
+            a {
+                position: relative;
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-size: 100%;
+                background-position: center center;
+                transition: all .3s ease-in-out;
+                color: white;
+                height: 50%;
+                padding: 3em;
+                .content {
+                    z-index: 2;
+                    transition: all .3s ease-in-out;
+                    p, h1, h2, h3, h4 {
+                        color: white;
+                    }
+                    h2, h3 {
+                        margin-bottom: 0;
+                    }
+                    h2 + p,  h3 + p {
+                        margin-top: 1em;
+                    }
+                }
+                .col-icon {
+                    width: 75px;
+                    padding-left: 10px;
+                }
+                .col-content {
+                    flex: 1;
+                    padding-left: 10px;
+                }
+                &:hover {
+                    transition: all .3s ease-in-out;
+                    background-size: 110%;
+                    .content {
+                        transform: translateY(-5px);
+                    }
+                    .btn {
+                        color: rgba(255,255,255, 1);
+                        svg {
+                            .btn--svg {
+                                fill: rgba(255,255,255, 1);
+                            }
+                        }
+                    }
+                    &:after {
+                        transition: all .3s ease-in-out;
+                        opacity: 0.9;
+                    }
+                    
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    transition: all .3s ease-in-out;
+                }
+            }
+            &:first-child {
+                width: 100%;
+                @include media-breakpoint-up(md) {
+                    width: 66.66667%;
+                }
+                a {
+                    height: 100%;
+                }
+            }
+            .exhibitors, .organisers, .trade {
+                padding: 3em;
+                @include media-breakpoint-up(lg) {
+                    padding: 4em 3em;
+                }
+                &:after {
+                    opacity: 0.85;
+                }
+            }
+
+            .exhibitors {
+                background-image: url("../assets/images/banner-exhibitor.png");
+                &:after {
+                    background: black;
+                }
+            }
+            .organisers {
+                background-image: url("../assets/images/banner-organiser.png");
+                &:after {
+                    background-color: get-color(brand, primary);
+                }
+            }
+            .trade {
+                background-image: url("../assets/images/banner-trade.png");
+                &:after {
+                    background-color: get-color(brand, tertiary);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+// =============================================================================
+// Links
+// =============================================================================
+
+a {
+	color: get-color(text, link);
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+}
+
+a:focus,
+a:hover {
+	color: get-color(text, hover);
+	// text-decoration: underline;
+}

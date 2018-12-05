@@ -1,0 +1,143 @@
+// =============================================================================
+// Variables
+// =============================================================================
+$debug:	false;
+$responsive-helper: true;
+
+$spacing: 16px;
+$spacing-s: $spacing/2;
+$spacing-xs: $spacing/3;
+$spacing-l: $spacing*2;
+$spacing-xl: $spacing*3;
+$spacing-xxl: $spacing*4;
+
+$border-radius: 4px;
+$border-radius-large: 32px;
+
+
+
+// =============================================================================
+// Variables - Colors
+// =============================================================================
+$colors: (
+	brand: (
+		primary: #FA6E0A,
+		secondary: #3A3461,
+		tertiary: #E3170A,
+		highlight: #FF1654
+	),
+	neutral: (
+		base: #ddd,
+		dark: #6a6a6a,
+		light: #efefef
+	),
+	text: (
+		base: #373737,
+		headings: #3A3461,
+		reversed: #fff,
+		link: #3A3461,
+		hover: #FA6E0A
+	),
+	background: (
+		base: #fff,
+		tint: #EFEFEF,
+		dark: #000,
+		dark-tint: #2a2a2a
+	),
+	global: (
+		header: #323232,
+		footer: #323232
+	),
+	social: (
+		facebook: #3B5998,
+		twitter: #1DA1F2,
+		instagram: #262626,
+		youtube: #cc181e,
+		linkedin: #0077B5
+	)
+);
+
+
+
+// =============================================================================
+// Variables - Typography
+// =============================================================================
+$font-stacks: (
+	display: '"Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+	body: '"Montserrat", Georgia, Times, "Times New Roman", serif',
+	caption: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+	monospace: 'Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace'
+);
+
+$font-weights: (
+	light: 300,
+	normal: 500,
+	bold: 700,
+	heavy: 900
+);
+
+// Keys should match those in $font-stacks
+$font-scales: (
+	display:
+	(
+		1: 16px,
+		2: 18px,
+		3: 21px,
+		4: 24px,
+		5: 28px,
+		6: 30px,
+		7: 42px,
+		8: 56px
+	),
+	body: (1: 12px, 2: 14px, 3: 15px),
+	caption: (1: 12px, 2: 14px, 3: 16px),
+	monospace: (1: 14px, 2: 16px)
+);
+
+
+
+// =============================================================================
+// Variables - Z-scale
+// =============================================================================
+$z-scale: (
+	blocks: 0,
+	banner: 1,
+	foreground: 1,
+	menu: 2,
+	logo: 2,
+	overlay: 10,
+	navigation: 100,
+	modal: 200
+);
+
+
+
+// =============================================================================
+// Variables - Responsive
+// =============================================================================
+$enable-flex: true;
+$enable-grid-classes: true;
+
+// Grid breakpoints
+// Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+) !default;
+
+// Grid containers
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+	sm: 540px,
+	md: 940px,
+	lg: 1020px,
+	xl: 1140px
+) !default;
+
+// Grid columns
+// Set the number of columns and specify the width of the gutters.
+$grid-columns: 12 !default;
+$grid-gutter-width: 20px !default;

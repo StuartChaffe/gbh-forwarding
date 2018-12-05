@@ -1,0 +1,21 @@
+// =============================================================================
+// Footer
+// =============================================================================
+
+[role=contentinfo] {
+	background: white;
+	padding: 60px 0;
+
+	p {
+		margin: 0;
+	}
+
+	.footer-menu {
+		list-style-type: none;
+		margin: 0;
+		li {
+			display: inline-block;
+			padding-left: $spacing;
+		}
+	}
+}

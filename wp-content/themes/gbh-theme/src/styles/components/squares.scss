@@ -1,0 +1,127 @@
+.squares {
+    padding-bottom: 75px;
+    a {
+        &:focus, &:hover {
+            text-decoration: none;
+        }
+    }
+    &-item {
+        background-size: 100%;
+        background-position: center center;
+        transition: all .3s ease-in-out;
+        padding: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: z-scale(blocks);
+
+        &:hover {
+            transition: all .3s ease-in-out;
+            background-size: 110%;
+            
+            .content {
+                transform: translateY(-5px);
+            }
+            .btn {
+                color: rgba(255,255,255, 1);
+                svg {
+                    .btn--svg {
+                        fill: rgba(255,255,255, 1);
+                    }
+                }
+            }
+            &:after {
+                transition: all .3s ease-in-out;
+                opacity: 0.9;
+            }
+            
+        }
+        
+        .content {
+            z-index: 2;
+            position: relative;
+            transition: all .3s ease-in-out;
+            * + h1, * + h2, * + h3, * + h4, * + h5, * + h6, * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6 {
+                margin-top: 1em;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transition: all .3s ease-in-out;
+        }
+
+        p, h2, .h2, h3, .h3,  h4, .h4 {
+            color: get-color(text, reversed);
+        }
+        h3 {
+            margin-bottom: 1em;
+        }
+        p {
+            margin: 0;
+        }
+
+        &--large {
+            height: auto;
+            @include media-breakpoint-up(md) {
+                height: 41.66667vw;
+                max-height: 380px;
+            }
+            @include media-breakpoint-up(lg) {
+                max-height: 405px;
+            }
+            @include media-breakpoint-up(xl) {
+                max-height: 455px;
+            }
+        }
+        &--medium {
+            height: auto;
+            @include media-breakpoint-up(md) {
+                height: 41.66667vw;
+                max-height: 280px;
+            }
+            @include media-breakpoint-up(lg) {
+                max-height: 320px;
+            }
+            @include media-breakpoint-up(xl) {
+                max-height: 360px;
+            }
+        }
+        &--small {
+            height: auto;
+            @include media-breakpoint-up(md) {
+                height: 25vw;
+                max-height: 215px;
+            }
+            @include media-breakpoint-up(lg) {
+                max-height: 235px;
+            }
+            @include media-breakpoint-up(xl) {
+                max-height: 265px;
+            }
+        }
+        &--orange {
+            &:after {
+                background-color: get-color(brand, primary);
+                opacity: 0.85;
+            }
+        }
+        &--black {
+            &:after {
+                background-color: black;
+                opacity: 0.85;
+            }
+        }
+        &--red {
+            &:after {
+                background-color: get-color(brand, tertiary);
+                opacity: 0.85;
+            }
+        }
+    }
+}

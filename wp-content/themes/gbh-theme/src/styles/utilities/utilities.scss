@@ -1,0 +1,148 @@
+// =============================================================================
+// Type helper classes
+// =============================================================================
+
+.u-bold { font-weight: bold!important; }
+.u-semibold { font-weight: 600!important; }
+.u-regular { font-weight: normal!important; }
+.u-light { font-weight: 300!important; }
+.u-italic { font-style: italic!important; }
+.u-caps { text-transform: uppercase!important; }
+.u-left-align { text-align: left!important; }
+.u-center { text-align: center!important; }
+.u-right-align { text-align: right!important; }
+
+// =============================================================================
+// Flex helper classes
+// =============================================================================
+
+.u-flex { display: flex;}
+.u-flex-space { justify-content: space-between;}
+.u-flex-center { align-items: center;}
+.u-flex-vcenter { justify-content: center;}
+.u-flex-row { flex-direction: row;}
+.u-flex-col { flex-direction: column;}
+.u-flex-bottom { margin-top: auto;}
+.u-flex-right { margin-left: auto;}
+
+
+// =============================================================================
+// Spacing
+// =============================================================================
+
+.u-m0 { margin: 0!important; }
+.u-mt0 { margin-top: 0!important; }
+.u-mr0 { margin-right: 0!important; }
+.u-mb0 { margin-bottom: 0!important; }
+.u-ml0 { margin-left: 0!important; }
+
+.u-m1 { margin: $spacing-s!important; }
+.u-mt1 { margin-top: $spacing-s!important; }
+.u-mr1 { margin-right: $spacing-s!important; }
+.u-mb1 { margin-bottom: $spacing-s!important; }
+.u-ml1 { margin-left: $spacing-s!important; }
+
+.u-m2 { margin: $spacing!important; }
+.u-mt2 { margin-top: $spacing!important; }
+.u-mr2 { margin-right: $spacing!important; }
+.u-mb2 { margin-bottom: $spacing!important; }
+.u-ml2 { margin-left: $spacing!important; }
+
+.u-m3 { margin: $spacing-l!important; }
+.u-mt3 { margin-top: $spacing-l!important; }
+.u-mr3 { margin-right: $spacing-l!important; }
+.u-mb3 { margin-bottom: $spacing-l!important; }
+.u-ml3 { margin-left: $spacing-l!important; }
+
+.u-mxn1 { margin-right: $spacing-s!important; margin-left: $spacing-s!important; }
+.u-mxn2 { margin-right: $spacing!important; margin-left: $spacing!important; }
+.u-mxn3 { margin-right: $spacing-l!important; margin-left: $spacing-l!important; }
+
+.u-p0 { padding: 0!important; }
+.u-pt0 { padding-top: 0!important; }
+.u-pr0 { padding-right: 0!important; }
+.u-pb0 { padding-bottom: 0!important; }
+.u-pl0 { padding-left: 0!important; }
+
+.u-pbsec {padding-bottom: 90px;}
+.u-ptsec {padding-top: 90px;}
+
+.u-p1 { padding: $spacing-s!important; }
+.u-py1 { padding-top: $spacing-s!important; padding-bottom: $spacing-s!important; }
+.u-px1 { padding-right: $spacing-s!important; padding-left: $spacing-s!important; }
+
+.u-p2 { padding: $spacing!important; }
+.u-py2 { padding-top: $spacing!important; padding-bottom: $spacing!important; }
+.u-px2 { padding-right: $spacing!important; padding-left: $spacing!important; }
+
+.u-p3 { padding: $spacing-l!important; }
+.u-py3 { padding-top: $spacing-l!important; padding-bottom: $spacing-l!important; }
+.u-px3 { padding-right: $spacing-l!important; padding-left: $spacing-l!important; }
+
+
+
+// =============================================================================
+// WordPress helper classes
+// =============================================================================
+
+img.alignright      { float: right; margin: 0 0 1em 1em; }
+img.alignleft       { float: left; margin: 0 1em 1em 0; }
+img.aligncenter     { display: block; margin-left: auto; margin-right: auto; }
+.alignright         { float: right; }
+.alignleft          { float: left; }
+.aligncenter        { display: block; margin-left: auto; margin-right: auto; }
+
+
+
+// =============================================================================
+// Helper classes
+// =============================================================================
+
+.show-grid .row > div {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@if $debug == true {
+    * {
+        box-shadow: inset 0 0 0 1px red;
+    }
+}
+
+@if $responsive-helper == true {
+    body::after {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: block;
+        padding: 15px;
+        color: #ffffff;
+
+        @include media-breakpoint-up(xs) {
+            background: magenta;
+            content: 'xs';
+        }
+
+        @include media-breakpoint-up(sm) {
+            background: red;
+            content: 'sm';
+        }
+
+        @include media-breakpoint-up(md) {
+            background: green;
+            content: 'md';
+        }
+
+        @include media-breakpoint-up(lg) {
+            background: blue;
+            content: 'lg';
+        }
+
+        @include media-breakpoint-up(xl) {
+            background: purple;
+            content: 'xl';
+        }
+    }
+}

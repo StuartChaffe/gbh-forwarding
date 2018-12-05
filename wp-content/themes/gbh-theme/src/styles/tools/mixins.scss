@@ -1,0 +1,77 @@
+// =============================================================================
+// Mixins
+// =============================================================================
+
+// Visually hides elements without hiding them from screen readers
+// Example usage:
+// @include visually-hidden();
+@mixin visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+
+
+// Reset margin, padding and list-style on a list
+// Example usage:
+// @include reset-list();
+ @mixin reset-list() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+// Z-index helper based on settings in variables.scss
+// Example usage:
+// z-index: z-scale(foreground);
+@function z-scale($key) {
+	@return map-get($z-scale, $key);
+}
+
+
+
+// Font-weight helper
+// Example usage:
+// font-weight: font-weight(bold);
+@function font-weight($key) {
+    @return map-get($font-weights, $key);
+}
+
+
+
+// Get color from palette
+// Example usage:
+// background-color: get-color(neutral, light);
+ @function get-color($palette, $tone: 'base') {
+	@return map-get(map-get($colors, $palette), $tone);
+}
+
+
+
+// Get font stack from vars
+// Example usage:
+// font-family: font-stack(body);
+@function font-stack($key) {
+    @if type-of(map-get($font-stacks, $key)) == string {
+        @return unquote(map-get($font-stacks, $key));
+    } @else {
+        @error "font-stack #{$key} is not defined";
+    }
+}
+
+
+
+// Get font size from vars
+// Example usage:
+// font-size: font-scale(display, 6);
+@function font-scale($stack, $index) {
+    @return map-get(map-get($font-scales, $stack), $index);
+}

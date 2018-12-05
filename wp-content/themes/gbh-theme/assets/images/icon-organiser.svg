@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 14</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-page" transform="translate(-172.000000, -655.000000)">
+            <g id="Group-14" transform="translate(173.000000, 656.000000)">
+                <circle id="Oval-2" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero" cx="28" cy="28" r="28"></circle>
+                <rect id="Rectangle-13" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero" x="12" y="15" width="32" height="25" rx="6"></rect>
+                <path d="M12,21 L44,21 L44,20 C44,17.2385763 41.7614237,15 39,15 L17,15 C14.2385763,15 12,17.2385763 12,20 L12,21 Z" id="Rectangle-13" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero"></path>
+                <text id="31" font-family="Montserrat-Bold, Montserrat" font-size="14" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="21.542" y="36">31</tspan>
+                </text>
+                <rect id="Rectangle-14" fill="#FFFFFF" fill-rule="nonzero" x="17" y="12" width="1" height="3" rx="0.5"></rect>
+                <rect id="Rectangle-14" fill="#FFFFFF" fill-rule="nonzero" x="38" y="12" width="1" height="3" rx="0.5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

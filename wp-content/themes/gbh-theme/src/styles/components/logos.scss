@@ -1,0 +1,23 @@
+.logos {
+    display: flex;
+    justify-content: space-around;
+    border-left: 1px solid rgba(0,0,0,0.06);
+    border-top: 1px solid rgba(0,0,0,0.06);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &-item {
+        flex: auto;
+        width: 33%;
+        padding: 32px;
+        box-sizing: border-box;
+        background: white;
+        border-right: 1px solid rgba(0,0,0,.1);
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        text-align: center;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

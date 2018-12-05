@@ -1,0 +1,19 @@
+// =============================================================================
+// Page
+// =============================================================================
+
+body {
+	background-color: get-color(background, tint);
+	color: get-color(text, base);
+	font-family: font-stack(body);
+	font-size: font-scale(body, 2);
+	font-weight: font-weight(normal);
+	line-height: 1.75;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@include media-breakpoint-up(md) {
+	body { font-size: font-scale(body, 3); }
+}

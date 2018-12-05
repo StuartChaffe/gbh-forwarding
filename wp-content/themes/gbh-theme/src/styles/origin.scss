@@ -1,0 +1,57 @@
+// Import origin
+@import "styles";
+
+// Style guide styles
+header {
+	border-bottom: 1px solid #EEE;
+}
+
+header h4 {
+	margin: 0;
+	line-height: 70px;
+}
+
+.subtitle {
+	color: #999;
+	text-transform: uppercase;
+	font-size: font-scale(display, 3);
+	margin-top: $spacing-l;
+	font-weight: 400;
+}
+
+.swatch {
+	min-height: 160px;
+	display: table;
+	width: 100%;
+	margin-bottom: $spacing;
+}
+
+.swatch--primary 		{ background: get-color(brand, primary); }
+.swatch--secondary 		{ background: get-color(brand, secondary); }
+.swatch--tertiary 		{ background: get-color(brand, tertiary); }
+.swatch--highlight	 	{ background: get-color(brand, highlight); }
+
+.swatch__meta {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	font-family: font-stack(monospace);
+	color: #fff;
+}
+
+.swatch__hex {
+	display: block;
+}
+
+.example-grid span {
+	display: block;
+    background: #eee;
+    text-align: center;
+    border-radius: 4px;
+	margin-bottom: $spacing;
+	padding: $spacing;
+
+	&:hover {
+		background: #ccc;
+	}
+}
